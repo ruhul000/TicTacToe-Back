@@ -7,4 +7,5 @@ As Node modules are added, use below command
 ```bash
 node server.js
 ```
-You will also need to create a database in mongoDB named 'tictac' or changed the database You wish in config.js file.
+You will also need to create a database in mongoDB named 'tictac' or changed the database as you wish in config.js file.
+ 
