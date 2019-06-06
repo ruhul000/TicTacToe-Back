@@ -1,4 +1,18 @@
 const Tic = require('../../models/index').User
+const Game = require('../../models/index').Game
+
+exports.createGame = function(req, res){
+
+    let game = new Game({gameID: Math.random().toString(36)})
+
+            game.save().then(doc => {
+                res.send({gameID : doc.gameID});
+              })
+              .catch(err => {
+                console.error(err)
+              })
+}
+
 
 exports.saveState = function(req, res){
     let body = req.body.payload
